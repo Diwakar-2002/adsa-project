@@ -111,7 +111,7 @@ int main() {
     auto sa = buildSuffixArray(combined);
     auto lcp = buildLCP(combined, sa);
 
-    // Find longest common substring between docs
+    
     int maxLen = 0, pos = -1;
     for (int i = 1; i < n; ++i) {
         if (docID[sa[i]] != docID[sa[i - 1]] && lcp[i - 1] > maxLen) {
